@@ -4,7 +4,6 @@
 
 <head>
     <meta charset="UTF-8" />
-  
     <meta name="mobile-web-app-capable" content="yes">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="yes" name="apple-touch-fullscreen" />
@@ -12,31 +11,49 @@
     <meta data-n-head="true" name="viewport"
         content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no" />
 
-    <title>Play & Download Top Free Mobile Games | fingexo</title>
+    <title>Play & Download Top Free Mobile Games | Goodfinancer</title>
     <meta name="keywords"
         content="Top Free Games for Phones, Popular Game Downloads, Action-Packed Mobile Titles, Strategic Gameplay Apps, Brain Teaser Games, High-Speed Racing Apps, Games for Kids and Teens, Cooking and Dress-Up Games, Thrilling Adventures, FavDojo" />
     <meta name="description"
         content="Play and download the best free mobile games at FavDojo! Enjoy action, racing, puzzle, cooking games, and more—fun for all ages and interests." />
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17807197056"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'AW-17807197056');
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Q3LWZZEMY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-6Q3LWZZEMY');
-    </script>
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+<script>
+  window.googletag = window.googletag || { cmd: [] };
+  let interstitialSlot;
 
+  googletag.cmd.push(() => {
+    // ✅ Define interstitial slot
+    interstitialSlot = googletag.defineOutOfPageSlot(
+      '/23330730517/fingexo.com_inter',
+      googletag.enums.OutOfPageFormat.INTERSTITIAL
+    );
 
+    if (interstitialSlot) {
+      interstitialSlot.addService(googletag.pubads());
+    }
+
+    googletag.enableServices();
+
+    // ✅ Preload the interstitial ad immediately after page load
+    if (interstitialSlot) {
+      googletag.display(interstitialSlot);
+    }
+  });
+
+  // ✅ Function to show interstitial and then call callback
+  function showInterstitialAd(callback) {
+    googletag.cmd.push(() => {
+      if (interstitialSlot) {
+        googletag.pubads().display(interstitialSlot);
+      }
+      // ⏳ Fast fallback: max wait 500ms
+      setTimeout(() => {
+        if (typeof callback === 'function') callback();
+      }, 500);
+    });
+  }
+</script>
     <style>
         .ads,
         .ads-prompt,
@@ -503,7 +520,24 @@
         gtag('config', 'G-6Q3LWZZEMY');
     </script>
 
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1590047148847923');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 </head>
 
 <body>
@@ -6442,12 +6476,12 @@
     <footer>
         <div class="line"></div>
         <div class="footer-content" style="max-width: 1030px">
-             <div class="links">
-                <a href="../explore/contact.html" title="About">Contact</a><a href="../explore/privacy.html"
-                    title="Privacy">Privacy Policy</a><a href="../explore/terms.html" title="Terms">Terms Of
+            <div class="links">
+                <a href="./contact.html" title="About">Contact</a><a href="./privacy.html"
+                    title="Privacy">Privacy Policy</a><a href="../terms.html" title="Terms">Terms Of
                     Services</a>
             </div>
-            <p class="introduce">&copy; </p>
+            <p class="introduce">&copy; Goodfinancer.com</p>
         </div>
     </footer>
     <script type="text/javascript">
